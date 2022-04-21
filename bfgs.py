@@ -1,6 +1,12 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 
+
+'''
+This code is from:
+https://github.com/trsav/bfgs/blob/master/BFGS.py
+'''
+
 def f(x):
     '''
     FUNCTION TO BE OPTIMISED
