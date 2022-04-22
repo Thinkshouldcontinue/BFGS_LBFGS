@@ -128,8 +128,22 @@ def L_bfgs(f, x0, max_it, m):
     return x, x_store
 
 x_opt, xstore= L_bfgs(f,[-1.5,5], 100, 10)
+
+'''
 print(x_opt)
 plt.scatter(xstore[:, 0], xstore[:, 1])
 plt.xlabel('x')
 plt.ylabel('y')
+plt.show()
+'''
+
+print('optimal value:', x_opt)
+fig, ax = plt.subplots()
+def animate(i):
+    length = len(xstore[:, 0])
+    ax.scatter(xstore[:, 0][i], xstore[:, 1][i])
+    ax.yaxis.set_ticks(np.arange(-2.5, 3, 0.25))
+    ax.xaxis.set_ticks(np.arange(-2.5, 3, 0.25))
+
+ani = FuncAnimation(fig, animate, frames= len(xstore[:, 0]), interval=500, repeat=False)
 plt.show()
