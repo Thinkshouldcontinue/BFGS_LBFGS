@@ -127,7 +127,7 @@ def L_bfgs(f, x0, max_it, m):
     
     return x, x_store
 
-x_opt, xstore= L_bfgs(f,[-1.5,5], 100, 10)
+x_opt, xstore= L_bfgs(f,[-1.5,2], 100, 10)
 
 '''
 print(x_opt)
